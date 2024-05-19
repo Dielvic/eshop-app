@@ -1,0 +1,24 @@
+displayName: Test_4/29/2024_1:56:04 PM
+testPlan: quick_test.jmx
+description: ''
+engineInstances: 1
+testId: 64ee1a11-2f81-4e51-a7d3-95cb188c172e
+testType: JMX
+splitAllCSVs: False
+failureCriteria:
+  - avg(response_time_ms) > 300
+  - percentage(error) > 50
+env:
+- name: domain
+  value: az400eshoponweb720742086.azurewebsites.net
+- name: protocol
+  value: https
+- name: threads_per_engine
+  value: 50
+- name: ramp_up_time
+  value: 60
+- name: duration_in_sec
+  value: 300
+autoStop:
+  errorPercentage: 90
+  timeWindow: 60
